@@ -69,7 +69,7 @@ export default function Dashboard({ userData }: DashboardProps) {
             padding: 12,
             displayColors: false,
             callbacks: {
-              label: (ctx) => `${ctx.parsed.y.toFixed(1)} kg CO2`
+            label: (ctx) => `${ctx.parsed.y?.toFixed(1) ?? '0'} kg CO2`
             }
           }
         },
@@ -369,3 +369,4 @@ export default function Dashboard({ userData }: DashboardProps) {
     </div>
   )
 }
+
